@@ -31,10 +31,10 @@ public class UserProfilePersistence implements IPersistence{
         contentValues.put(UsersTable.COLUMN_NAME_USERNAME, userProfile.getUsername());
         contentValues.put(UsersTable.COLUMN_NAME_BIRTHDAY, userProfile.getBirthday());
         contentValues.put(UsersTable.COLUMN_NAME_MOBILE, userProfile.getMobilePhone());
-        //contentValues.put(UsersTable.COLUMN_NAME_EMAIL, userProfile.getEmail());
+        contentValues.put(UsersTable.COLUMN_NAME_EMAIL, userProfile.getEmail());
         contentValues.put(UsersTable.COLUMN_NAME_PASSWORD, userProfile.getPassword());
 
-        Log.d("UserProfilePersistence", "inserting user: "+userProfile.getFirstname()+" "+userProfile.getSurname());
+        Log.d("userProfilePersistence", "contentValues =  " + contentValues.toString());
 
         // Insert the ContentValues into the Users table.
         sqLiteDatabase.insert(UsersTable.TABLE_NAME, null, contentValues);
@@ -103,6 +103,10 @@ public class UserProfilePersistence implements IPersistence{
                 userProfiles.add(userProfile);
 
             } while (cursor.moveToNext()) ;
+        }
+        else {
+            Log.d("UserProfilePersistence::getDataFromDB", "error cursor is null");
+
         }
 
         return userProfiles;

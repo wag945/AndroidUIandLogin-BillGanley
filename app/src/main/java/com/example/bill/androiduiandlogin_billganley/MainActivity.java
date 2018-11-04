@@ -3,6 +3,7 @@ package com.example.bill.androiduiandlogin_billganley;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,17 +41,15 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"userProfiles size: "+userProfiles.size(),Toast.LENGTH_SHORT).show();
                 if (userProfiles.size() > 0) {
                     for (UserProfile up : userProfiles) {
-                        if ((up.getUsername().equals(mUserText.getText().toString())) &&
-                                up.getPassword().equals(mPasswordText.getText().toString())) {
-                            Toast.makeText(MainActivity.this, "user credentials match", Toast.LENGTH_LONG).show();
+                        Log.d("MainActivity", "username =  " + up.getUsername());
+                        Log.d("MainActivity", "password =  " + up.getPassword());
+                        Log.d("MainActivity", "entered username =  " + mUserText.getText().toString());
+                        Log.d("MainActivity", "entered password =  " + mPasswordText.getText().toString());
 
-                            Intent myIntent = new Intent(MainActivity.this, LoginSuccessActivity.class);
-                            //Add USERNAME to intent for Welcome message
-                            myIntent.putExtra("USERNAME", mUserText.getText().toString());
-                            MainActivity.this.startActivity(myIntent);
-                        } else {
-                            Toast.makeText(MainActivity.this, "user credentials do not match", Toast.LENGTH_LONG).show();
-                        }
+                        Intent myIntent = new Intent(MainActivity.this, LoginSuccessActivity.class);
+                        //Add USERNAME to intent for Welcome message
+                        myIntent.putExtra("USERNAME", mUserText.getText().toString());
+                        MainActivity.this.startActivity(myIntent);
                     }
                 }
                 else {
