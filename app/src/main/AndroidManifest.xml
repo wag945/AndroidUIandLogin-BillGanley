@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".LoginSuccessActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".ViewAllUsersActivity"></activity>
+        <activity android:name=".ViewAllUsersActivity" />
+        <activity android:name=".UserDetailsActivity"></activity>
     </application>
 
 </manifest>

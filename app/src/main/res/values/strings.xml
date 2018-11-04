@@ -9,4 +9,5 @@
     <string name="btn_create_user">Sign Up</string>
     <string name="edit_text_firstname">Firstname</string>
     <string name="user_created">User successfully created</string>
+    <string name="image_view_description">Users</string>
 </resources>
