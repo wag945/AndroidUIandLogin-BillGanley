@@ -45,11 +45,24 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("MainActivity", "password =  " + up.getPassword());
                         Log.d("MainActivity", "entered username =  " + mUserText.getText().toString());
                         Log.d("MainActivity", "entered password =  " + mPasswordText.getText().toString());
-
-                        Intent myIntent = new Intent(MainActivity.this, LoginSuccessActivity.class);
-                        //Add USERNAME to intent for Welcome message
-                        myIntent.putExtra("USERNAME", mUserText.getText().toString());
-                        MainActivity.this.startActivity(myIntent);
+                        String enteredUser = mUserText.getText().toString();
+                        String enteredPasswored = mPasswordText.getText().toString();
+                        if (enteredUser.equals(up.getUsername().trim())) {
+                            Log.d("MainActivity","username matched");
+                            if (enteredPasswored.equals(up.getPassword())) {
+                                Log.d("MainActivity","password matched");
+                                Intent myIntent = new Intent(MainActivity.this, LoginSuccessActivity.class);
+                                //Add USERNAME to intent for Welcome message
+                                myIntent.putExtra("USERNAME", mUserText.getText().toString());
+                                MainActivity.this.startActivity(myIntent);
+                            }
+                            else {
+                                Log.d("MainActivity","password did not match "+up.getPassword());
+                            }
+                        }
+                        else {
+                            Log.d("MainActivity","username did not match "+up.getUsername());
+                        }
                     }
                 }
                 else {
