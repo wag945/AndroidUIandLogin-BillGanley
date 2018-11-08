@@ -47,6 +47,20 @@ public class SignupActivity extends AppCompatActivity {
         mConfirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                userProfilePersistence = new UserProfilePersistence(SignupActivity.this);
+
+                userProfile = new UserProfile(  mFirstnameText.getText().toString(),
+                                                mSurnameText.getText().toString(),
+                                                mUserNameText.getText().toString(),
+                                                mBirthdayText.getText().toString(),
+                                                mMobileText.getText().toString(),
+                                                mEmailText.getText().toString(),
+                                                mPasswordText.getText().toString());
+
+                Log.d("SignupActivity", "writing user: "+mFirstnameText.getText().toString()+" "+mSurnameText.getText().toString());
+
+                //Write UserProfile to DB
+                userProfilePersistence.insert(userProfile);
                 String email = mEmailText.getText().toString().trim();
                 String password = mPasswordText.getText().toString();
                 Log.d("SignupActivity","email: "+email+" password: "+password);
