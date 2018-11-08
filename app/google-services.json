@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "34505513571",
+    "firebase_url": "https://androiduiandloginbillganley.firebaseio.com",
+    "project_id": "androiduiandloginbillganley",
+    "storage_bucket": "androiduiandloginbillganley.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34505513571:android:74be907bdae33a54",
+        "android_client_info": {
+          "package_name": "com.example.bill.androiduiandlogin_billganley"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34505513571-q8s4na874prm0b0defnr413ls5j273g7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bill.androiduiandlogin_billganley",
+            "certificate_hash": "af39b0d26277d31adafad43ef550957f32b5ffb0"
+          }
+        },
+        {
+          "client_id": "34505513571-o9v0ql15vgm40n4h03hkdeumop3akhur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh_yQgDq82yF55j_0lHmRo0pPK2L7rXho"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34505513571-o9v0ql15vgm40n4h03hkdeumop3akhur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
